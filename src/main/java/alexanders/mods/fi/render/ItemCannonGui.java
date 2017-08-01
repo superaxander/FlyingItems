@@ -21,7 +21,7 @@ public class ItemCannonGui extends GuiContainer {
     @Override
     public void initGui(IGameInstance game) {
         super.initGui(game);
-        this.components.add(new ComponentProgressBar(this, guiLeft + 78, guiTop, 10, 18, PROGRESS_COLOR, true, () -> te.cooldown/200f));
+        this.components.add(new ComponentProgressBar(this, guiLeft + 78, guiTop, 10, 18, PROGRESS_COLOR, true, () -> te.cooldown / 200f));
     }
 
     @Override

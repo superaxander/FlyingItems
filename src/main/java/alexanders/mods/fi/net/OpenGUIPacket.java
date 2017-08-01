@@ -51,7 +51,7 @@ public class OpenGUIPacket implements IPacket {
             Entity e = world.getEntity(uuid);
             if (e instanceof AbstractEntityPlayer) {
                 AbstractEntityPlayer player = (AbstractEntityPlayer) e;
-                ItemCannonTileEntity te = (ItemCannonTileEntity)world.getTileEntity(x, y);
+                ItemCannonTileEntity te = (ItemCannonTileEntity) world.getTileEntity(x, y);
                 player.openGuiContainer(new ItemCannonGui(player, te), new ItemCannonContainer(player, te));
             }
             return true;

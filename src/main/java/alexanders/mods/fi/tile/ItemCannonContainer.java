@@ -4,7 +4,6 @@ import alexanders.mods.fi.FlyingItems;
 import de.ellpeck.rockbottom.api.entity.player.AbstractEntityPlayer;
 import de.ellpeck.rockbottom.api.gui.container.ContainerSlot;
 import de.ellpeck.rockbottom.api.gui.container.ItemContainer;
-import de.ellpeck.rockbottom.api.tile.entity.TileEntity;
 import de.ellpeck.rockbottom.api.util.reg.IResourceName;
 
 import static de.ellpeck.rockbottom.api.RockBottomAPI.createRes;

@@ -3,14 +3,20 @@ package alexanders.mods.fi.tile;
 import de.ellpeck.rockbottom.api.IGameInstance;
 import de.ellpeck.rockbottom.api.data.set.DataSet;
 import de.ellpeck.rockbottom.api.entity.EntityItem;
+import de.ellpeck.rockbottom.api.inventory.IInventory;
 import de.ellpeck.rockbottom.api.inventory.Inventory;
 import de.ellpeck.rockbottom.api.item.ItemInstance;
+import de.ellpeck.rockbottom.api.tile.entity.IInventoryHolder;
 import de.ellpeck.rockbottom.api.tile.entity.TileEntity;
+import de.ellpeck.rockbottom.api.util.Direction;
 import de.ellpeck.rockbottom.api.world.IWorld;
+
+import java.util.Collections;
+import java.util.List;
 
 import static de.ellpeck.rockbottom.api.RockBottomAPI.getNet;
 
-public class ItemCannonTileEntity extends TileEntity {
+public class ItemCannonTileEntity extends TileEntity implements IInventoryHolder {
     public Inventory inventory = new Inventory(1);
     public int cooldown = 0;
     private boolean dirty = false;
@@ -73,5 +79,20 @@ public class ItemCannonTileEntity extends TileEntity {
                 dirty = true;
             }
         }
+    }
+
+    @Override
+    public IInventory getInventory() {
+        return inventory;
+    }
+
+    @Override
+    public List<Integer> getInputSlots(ItemInstance instance, Direction dir) {
+        return Collections.singletonList(0);
+    }
+
+    @Override
+    public List<Integer> getOutputSlots(Direction dir) {
+        return Collections.emptyList();
     }
 }
