@@ -4,6 +4,7 @@ import alexanders.mods.fi.tile.FunnelTile;
 import de.ellpeck.rockbottom.api.IGameInstance;
 import de.ellpeck.rockbottom.api.assets.IAssetManager;
 import de.ellpeck.rockbottom.api.assets.tex.Texture;
+import de.ellpeck.rockbottom.api.item.ItemInstance;
 import de.ellpeck.rockbottom.api.render.tile.DefaultTileRenderer;
 import de.ellpeck.rockbottom.api.tile.state.TileState;
 import de.ellpeck.rockbottom.api.util.reg.IResourceName;
@@ -37,7 +38,7 @@ public class FunnelTileRenderer extends DefaultTileRenderer<FunnelTile> {
     }
 
     @Override
-    public void renderItem(IGameInstance game, IAssetManager manager, Graphics g, FunnelTile tile, int meta, float x, float y, float scale, Color filter) {
+    public void renderItem(IGameInstance game, IAssetManager manager, Graphics g, FunnelTile tile, ItemInstance instance, float x, float y, float scale, Color filter) {
         manager.getTexture(texture.addSuffix("_down")).draw(x, y, scale, scale, filter);
     }
 
