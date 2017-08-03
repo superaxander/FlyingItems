@@ -1,6 +1,8 @@
 package alexanders.mods.fi;
 
 import alexanders.mods.fi.net.OpenGUIPacket;
+import alexanders.mods.fi.net.RotationPacket;
+import alexanders.mods.fi.tile.FunnelTile;
 import alexanders.mods.fi.tile.ItemCannonTile;
 import de.ellpeck.rockbottom.api.IApiHandler;
 import de.ellpeck.rockbottom.api.IGameInstance;
@@ -55,8 +57,10 @@ public class FlyingItems implements IMod {
 
     @Override
     public void init(IGameInstance game, IApiHandler apiHandler, IEventHandler eventHandler) {
-        Tile tile = new ItemCannonTile(createRes(this, "cannon")).register();
-        CONSTRUCTION_TABLE_RECIPES.add(new BasicRecipe(new ItemInstance(tile), new ResUseInfo(PROCESSED_STONE, 4), new ResUseInfo(WOOD_BOARDS, 4), new ResUseInfo(PARTLY_PROCESSED_COPPER, 8)));
+        Tile cannon = new ItemCannonTile(createRes(this, "cannon")).register();
+        Tile funnel = new FunnelTile(createRes(this, "funnel")).register();
+        CONSTRUCTION_TABLE_RECIPES.add(new BasicRecipe(new ItemInstance(cannon), new ResUseInfo(PROCESSED_STONE, 4), new ResUseInfo(WOOD_BOARDS, 4), new ResUseInfo(PARTLY_PROCESSED_COPPER, 8)));
         PACKET_REGISTRY.register(PACKET_REGISTRY.getNextFreeId(), OpenGUIPacket.class);
+        PACKET_REGISTRY.register(PACKET_REGISTRY.getNextFreeId(), RotationPacket.class);
     }
 }

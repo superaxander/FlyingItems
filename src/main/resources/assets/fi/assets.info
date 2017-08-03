@@ -2,3 +2,5 @@ loc.us_english=/loc/us_english.loc
 tex.tiles.cannon=/tile/cannon_base.png
 tex.tiles.cannon.item=/tile/cannon_item.png
 tex.tiles.cannon.head=/tile/cannon_head.png
+tex.tiles.funnel_down=/tile/funnel_down.png
+tex.tiles.funnel_right=/tile/funnel_right.png
