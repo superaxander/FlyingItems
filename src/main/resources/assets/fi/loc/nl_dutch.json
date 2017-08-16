@@ -1,0 +1,14 @@
+{
+  "fi": {
+    "desc": {
+      "mod": "Schiet items alle kanten open"
+    },
+    "item": {
+      "cannon": "Item Kanon",
+      "funnel": "Item Trechter"
+    },
+    "key": {
+      "rotate": "Draai"
+    }
+  }
+}

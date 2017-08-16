@@ -1,0 +1,17 @@
+{
+  "loc": {
+    "nl_dutch": "/loc/nl_dutch.loc",
+    "us_english": "/loc/us_english.loc"
+  },
+  "tex": {
+    "tiles": {
+      "cannon": {
+        "*": "/tile/cannon_base.png",
+        "item": "/tile/cannon_item.png",
+        "head": "/tile/cannon_head.png"
+      },
+      "funnel_down": "/tile/funnel_down.png",
+      "funnel_right": "/tile/funnel_right.png"
+    }
+  }
+}
