@@ -10,6 +10,7 @@ import de.ellpeck.rockbottom.api.tile.entity.IInventoryHolder;
 import de.ellpeck.rockbottom.api.tile.entity.TileEntity;
 import de.ellpeck.rockbottom.api.util.Direction;
 import de.ellpeck.rockbottom.api.world.IWorld;
+import de.ellpeck.rockbottom.api.world.layer.TileLayer;
 
 import java.util.Collections;
 import java.util.List;
@@ -21,9 +22,9 @@ public class ItemCannonTileEntity extends TileEntity implements IInventoryHolder
     public int cooldown = 0;
     private boolean dirty = false;
 
-    public ItemCannonTileEntity(IWorld world, int x, int y) {
-        super(world, x, y);
-        inventory.addChangeCallback((a, b, c) -> dirty = true);
+    public ItemCannonTileEntity(IWorld world, int x, int y, TileLayer layer) {
+        super(world, x, y, layer);
+        inventory.addChangeCallback((a, b) -> dirty = true);
     }
 
     @Override

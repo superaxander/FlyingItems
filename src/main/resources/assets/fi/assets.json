@@ -1,7 +1,7 @@
 {
   "loc": {
-    "nl_dutch": "/loc/nl_dutch.loc",
-    "us_english": "/loc/us_english.loc"
+    "nl_dutch": "/loc/nl_dutch.json",
+    "us_english": "/loc/us_english.json"
   },
   "tex": {
     "tiles": {

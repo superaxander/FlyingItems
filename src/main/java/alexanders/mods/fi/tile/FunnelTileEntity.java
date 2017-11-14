@@ -10,6 +10,7 @@ import de.ellpeck.rockbottom.api.tile.entity.TileEntity;
 import de.ellpeck.rockbottom.api.util.Direction;
 import de.ellpeck.rockbottom.api.util.Util;
 import de.ellpeck.rockbottom.api.world.IWorld;
+import de.ellpeck.rockbottom.api.world.layer.TileLayer;
 
 import java.util.List;
 
@@ -17,8 +18,8 @@ import static de.ellpeck.rockbottom.api.RockBottomAPI.getNet;
 
 public class FunnelTileEntity extends TileEntity {
 
-    public FunnelTileEntity(IWorld world, int x, int y) {
-        super(world, x, y);
+    public FunnelTileEntity(IWorld world, int x, int y, TileLayer layer) {
+        super(world, x, y, layer);
     }
 
     private static Triplet<IInventory, List<Integer>, List<Integer>> getInventory(IWorld world, int x, int y, ItemInstance instance, Direction dir) {

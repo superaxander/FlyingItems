@@ -13,7 +13,7 @@ import de.ellpeck.rockbottom.api.tile.state.TileState;
 import de.ellpeck.rockbottom.api.util.BoundBox;
 import de.ellpeck.rockbottom.api.util.reg.IResourceName;
 import de.ellpeck.rockbottom.api.world.IWorld;
-import de.ellpeck.rockbottom.api.world.TileLayer;
+import de.ellpeck.rockbottom.api.world.layer.TileLayer;
 
 import static de.ellpeck.rockbottom.api.RockBottomAPI.getGame;
 import static de.ellpeck.rockbottom.api.RockBottomAPI.getNet;
@@ -83,8 +83,8 @@ public class ItemCannonTile extends TileBasic {
     }
 
     @Override
-    public TileEntity provideTileEntity(IWorld world, int x, int y) {
-        return new ItemCannonTileEntity(world, x, y);
+    public TileEntity provideTileEntity(IWorld world, int x, int y, TileLayer layer) {
+        return new ItemCannonTileEntity(world, x, y, layer);
     }
 
     @Override

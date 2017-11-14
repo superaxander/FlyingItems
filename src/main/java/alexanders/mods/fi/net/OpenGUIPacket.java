@@ -45,16 +45,15 @@ public class OpenGUIPacket implements IPacket {
 
     @Override
     public void handle(IGameInstance game, ChannelHandlerContext context) {
-        game.scheduleAction(() -> {
+        game.enqueueAction((gameInstance, o) -> {
             System.out.println("Executing");
-            IWorld world = game.getWorld();
+            IWorld world = gameInstance.getWorld();
             Entity e = world.getEntity(uuid);
             if (e instanceof AbstractEntityPlayer) {
                 AbstractEntityPlayer player = (AbstractEntityPlayer) e;
                 ItemCannonTileEntity te = (ItemCannonTileEntity) world.getTileEntity(x, y);
                 player.openGuiContainer(new ItemCannonGui(player, te), new ItemCannonContainer(player, te));
             }
-            return true;
-        });
+        }, null);
     }
 }

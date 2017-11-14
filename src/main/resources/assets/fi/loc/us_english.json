@@ -1,14 +1,14 @@
 {
   "fi": {
     "desc": {
-      "mod": "Schiet items alle kanten open"
+      "mod": "Shoot items in all directions"
     },
     "item": {
-      "cannon": "Item Kanon",
-      "funnel": "Item Trechter"
+      "cannon": "Item Cannon",
+      "funnel": "Item Funnel"
     },
     "key": {
-      "rotate": "Draai"
+      "rotate": "Rotate"
     }
   }
 }
